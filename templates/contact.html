@@ -1,0 +1,105 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+    <!-- header_start  -->
+
+    <!-- bradcam_area_start -->
+    <div class="bradcam_area breadcam_bg">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="bradcam_text text-center">
+                        <h3>contact</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+     <div class="dance-agile-info col-lg-3 col-md-6 col-sm-6">
+            <h4 class="pb-lg-4 pb-md-3 pb-3 text-uppercase" data-blast="color">Contact Us</h4>
+            <div class="address_mail_footer_grids">
+            <!--   <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3539.812628729253!2d153.014155!3d-27.4750921!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6b915a0835840a2f%3A0xdd5e3f5c208dc0e1!2sMelbourne+St%2C+South+Brisbane+QLD+4101%2C+Australia!5e0!3m2!1sen!2sin!4v1492257477691"></iframe> -->
+          <!--  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3532.6657168709066!2d85.3343223996894!3d27.696724882483192!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb199e8e8283db%3A0x309e46eac64e928d!2sAmbition+Academy!5e0!3m2!1sen!2snp!4v1555931861153!5m2!1sen!2snp" width="800" height="600" frameborder="0" style="border:0" allowfullscreen></iframe> -->
+         <!--  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14130.927037028916!2d85.33106356761267!3d27.69468432475194!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb199a06c2eaf9%3A0xc5670a9173e161de!2sNew%20Baneshwor%2C%20Kathmandu%2044600!5e0!3m2!1sen!2snp!4v1582952113841!5m2!1sen!2snp" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe> -->
+         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7064.951559481293!2d85.33773557184955!3d27.702592731175404!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb199c57ba27b5%3A0xde93b6685bb60872!2sOld%20Baneshwor%2C%20Kathmandu%2044600!5e0!3m2!1sen!2snp!4v1582952237914!5m2!1sen!2snp" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+
+
+            </div>
+          </div>
+      </div>
+    <!-- bradcam_area_end -->
+
+    <!-- ================ contact section start ================= -->
+    <section class="contact-section">
+            <div class="container">
+                
+    
+    
+                <div class="row">
+                    <div class="col-12">
+                        <h2 class="contact-title">Get in Touch</h2>
+                    </div>
+                    <div class="col-lg-8">
+                        <form method="post">
+                            {% csrf_token %}
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="form-group">
+                                    
+                                      {{form.message}}
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                     
+                                       {{form.name}}
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                
+                                     {{form.email}}
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="form-group">
+                                        {{form.subject}}
+                                    
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group mt-3">
+                                <button type="submit" class="button button-contactForm boxed-btn">Send</button>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="col-lg-3 offset-lg-1">
+                        <div class="media contact-info">
+                            <span class="contact-info__icon"><i class="ti-home"></i></span>
+                            <div class="media-body">
+                                <h3>Buttonwood, California.</h3>
+                                <p>Rosemead, CA 91770</p>
+                            </div>
+                        </div>
+                        <div class="media contact-info">
+                            <span class="contact-info__icon"><i class="ti-tablet"></i></span>
+                            <div class="media-body">
+                                <h3>+1 253 565 2365</h3>
+                                <p>Mon to Fri 9am to 6pm</p>
+                            </div>
+                        </div>
+                        <div class="media contact-info">
+                            <span class="contact-info__icon"><i class="ti-email"></i></span>
+                            <div class="media-body">
+                                <h3>support@colorlib.com</h3>
+                                <p>Send us your query anytime!</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+  
+    {% endblock %}
